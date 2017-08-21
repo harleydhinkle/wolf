@@ -15,9 +15,9 @@ int main()
 	dayGreeting(16,8,2017);
 	timeGreeting(12,03);
 	cout << isLeepyYear(2017) << endl;
-	SeedRng (13);
+	SeedRng (1);
 	cout << rng << endl;
 	cout << rangRange(15, 30) << endl;
-	cout << rngBchance(0) << endl;
+	cout << rngBchance(1) << endl;
 	system("pause");
 }
