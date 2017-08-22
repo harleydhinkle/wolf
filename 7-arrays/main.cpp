@@ -27,28 +27,92 @@ void printNumbers2(int numbers[], int size)
 int findIndex(int numbers[], int size, int value) 
 {
 	for (int i = 0; i < size; i++) 
-	{
-		return i;
+	{ 
+		if (numbers[i] == value) {
+			return i;
+		}
 	}
 	return -1;
 
 }
-bool arrayunqueness(int number[], int size) 
+//bool arrayunqueness(int number[], int size) 
+//{
+	//for (int i = 0; i < size; i++)
+	//{
+		//for (int j= 0; j < size; j++)
+		//{
+			//if (i!= j && number[j])
+			//}		
+	//}
+	//return false;
+//}
+int largestnumber(int number[], int size)
 {
-	for (int i = 0; i < size; i++)
+	int largest = INT_MIN;
+	for (int i = 0; i < size; ++i) 
 	{
-		if (true)
+		if (number[i] > largest) 
 		{
-			std::cout << "yes" << std::endl;
-			return true;
-		}
-
-		else
-		{
-			std::cout << "no" << std::endl;
+			largest = number[i];
 		}
 	}
-	return false;
+	return largest;
+}
+void reverse(int numbers[],  int size)
+{
+	for (int i = 0; i < size / 2; ++i)
+	{
+		int temp = numbers[i];
+		numbers[i] = numbers[size - 1 - i];
+		numbers[size - 1- i] = temp;
+	}
+}
+void sortAscend(int numbers[], int size) 
+{
+	while (true){
+		bool isSorted = true;
+
+		for (int i = 0; i < size - 1; ++i) {
+			for (int i = 0; i < size - 1; ++i)
+			{
+				if (numbers[i] > numbers[i + 1])
+				{
+					int temp = numbers[i];
+					numbers[i] = numbers[i + 1];
+					numbers[i + 1] = temp;
+					isSorted = false;
+				}
+				if(isSorted)
+				{
+					break;
+				}
+			}
+		}
+	}
+}
+void sortDescend(int numbers[], int size)
+{
+	while (true)
+	{
+		bool isSorted = true;
+
+		for (int i = 0; i < size - 1; ++i) {
+			for (int i = 0; i < size - 1; ++i)
+			{
+				if (numbers[i] < numbers[i + 1])
+				{
+					int temp = numbers[i];
+					numbers[i] = numbers[i + 1];
+					numbers[i + 1] = temp;
+					isSorted = false;
+				}
+				if (isSorted)
+				{
+					break;
+				}
+			}
+		}
+
 }
 int main()
 {
@@ -89,13 +153,19 @@ int main()
 	sumNumbers(numbers2, 4);
 	int number3[]{ 4,8,5,9 };
 	int numbers4[]{ 1,2,5,7 };
-	
+	largestnumber(numbers, 4);
 	//open
 	//1.
-	findIndex(number3, 4, 5);
+	findIndex(numbers, 4, 5);
+	printNumbers2(numbers, 4);
 	//2.
-	arrayunqueness(numbers4, 4);
+	//arrayunqueness(numbers4, 4);
+	//3.
+	reverse(numbers, 4);
+	printNumbers2(numbers, 4);
+	//4.
 
+	//5.
 
 	system("pause");
 }
