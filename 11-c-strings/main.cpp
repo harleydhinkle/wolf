@@ -44,7 +44,7 @@ int main()
 	else if (strcmp(name, "red") == 0)
 		std::cout << "apples are red" << std::endl;
 	//3.
-	char buffer[80] = { 0 };
+	char buffer[80] = { "" };
 	int j = 0;
 	std::cin.ignore(80, '\n');
 	std::cin.getline(name, 80);
