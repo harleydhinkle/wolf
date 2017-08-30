@@ -52,12 +52,13 @@ void intro(int day)
 			day = day + 1;
 			//std::cout << "day:" << day << " it is the next day the same pack mamber tells you that the pack is more hunger" << std::endl;
 			DayOutCome = 2;
-			if(day ==7 )
+			if(day == 7 )
 			{
 				DayOutCome = 7;
-				break;
+				
 			}
 			continue;
+			break;
 		}
 		else
 		{
@@ -170,18 +171,62 @@ void chapter1()
 												cout << " you desided to make tham chass you so you run up to tham a growled they trurnd around a show you you started runing and they ran after you" << endl;
 												cout << " meen will your pack exits the cave and goes and hides you run into the woulds and hides be hind a tree and the hunters run past you" << endl;
 												cout << "you are now in the forest you can go north south or east wich one would you like to go" << endl;
-												std::cout << "1: to go north \n2:to go south \n3:east" << std::endl;
-												std::cin >> userinput;
+												cout << "1: to go north \n2:to go south \n3:east" << std::endl;
+												cin >> userinput;
 												if (userinput == 1) 
 												{
+													cout << "so you desided to go north" << endl;
+													cout << "you walk north you see another hunter and his pet but for some reson his on high alert so you cant snick be around him" << endl;
+													cout << "1:to fight" << endl;
+													cin >> userinput;
+													if (userinput == 1)
+													{
+
+													}
 
 												}
-												else if (userinput == 2) 
+												else if (userinput == 2)
 												{
+													cout << " you deside to go south" << endl;
+													cout << "you walk south  you see no elk why is there hunters around but no elk you wander so you have to choseses hade back or go east" << endl;
+													cout << " 1:go back \n2: go east" << endl;
+													cin >> userinput;
+													if (userinput == 1)
+													{
+														cout << "you deside to go back" << endl;
+														cout << "you walk back than know you have to opchinse go north or east" << endl;
+														cout << "1:go north\n2:east" << endl;
+														cin >> userinput;
+														if (userinput == 1)
+														{
+															cout << "you deside to go north" << endl;
+															cout << "you walk north you see another hunter and his pet but for some reson his on high alert so you cant snick be around him" << endl;
+															cout << "1:to fight" << endl;
+															cin >> userinput;
+															if (userinput == 1)
+															{
 
+															}
+														}
+														else if (userinput == 2)
+														{
+															cout << "you deside to go east" << endl;
+															cout << "you walk east you run see the two hunteres you got away from the cave there looking for you you cant snick aroud tham" << endl;
+															cout << "1:figt tham" << endl;
+															cin >> userinput;
+															if (userinput == 1)
+															{
+
+															}
+
+														}
+													}
 												}
 												else if (userinput == 3) 
 												{
+													cout << "you deside to go east" << endl;
+													cout << "you walk east and see the border to anther wolfs land you have two choes go back or go onto the other land" << endl;
+													cout << "1:go back\n 2: go on to the land" << endl;
 
 												}
 											}
@@ -197,6 +242,20 @@ void chapter1()
 								cout << "you make the hunter chass you into the  the cave wer e the other pack mabers kill him" << endl;
 								cout << "now you ownly have it two more opchise" << endl;
 								cout << "you can go to the forest or south" << endl;
+								cout << "1:to go to the forest \n2:to the south" << endl;
+								cin >> userinput;
+								if (userinput == 1) 
+								{
+									cout << "you deside to go to the forest" << endl;
+								}
+								else if (userinput == 2) 
+								{
+									cout << "you deside to go south" << endl;
+									cout << "you walk south and you see no elk your wandering why theres no elk around the grass land use to be filled with elk" << endl;
+									cout << "you deside to go back and into the woods you can know go north south and east" << endl;
+									cout << "1: to go north \n2:to go south \n3:east" << std::endl;
+									cin >> userinput;
+								}
 
 							}
 							else if (userinput == 3)
@@ -280,6 +339,18 @@ void chapter1()
 												cout << "you are now in the forest you can go north south or east wich one would you like to go" << endl;
 												std::cout << "1: to go north \n2:to go south \n3:east" << std::endl;
 												std::cin >> userinput;
+												if (userinput == 1)
+												{
+
+												}
+												else if (userinput == 2) 
+												{
+
+												}
+												else if (userinput == 3) 
+												{
+
+												}
 											}
 										}
 										else if (userinput == 2)
