@@ -1,9 +1,12 @@
 #include "story.h"
 #include <iostream>
-#include <windows.h> 
+#include <windows.h>
+#include <fstream>
 using std::cout; 
 using std::endl;
 using std::cin;
+using std::fstream;
+using std::string;
 void ColorPicker(int color)
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
@@ -31,7 +34,15 @@ void printswich(int DayOutCome , int day)
 }
 void intro(int day)
 {
-	
+
+	//fstream save;
+	//save.open("saveGame.txt", std::ios::out);
+	//if (save.fail()) 
+	//{
+	//	std::cout << "Something went wrong." << std::endl;
+	//	return;
+	//}
+
 	int userinput;
 	int DayOutCome = 0;
 
@@ -74,6 +85,16 @@ void intro(int day)
 }
 void chapter1()
 {
+	fstream save;
+	save.open("saveGame.txt");
+	if (save.fail())
+	{
+		cout << "file not there (chapter 1)" << endl;
+		return;
+	}
+	save << "1";
+	save.flush();
+	save.close();
 	ColorPicker(2);
 	std::cout << "so you walk out of your cave you have two places you can go first you can go to grass land or forest " << std::endl;
 	std::cout << "1:go two grass land \n2: Go to forest" << std::endl;
@@ -142,7 +163,7 @@ void chapter1()
 								{
 
 								}
-								else if (userinput == 2);
+								else if (userinput == 2)
 								{
 									cout << "you snick around him but it was really close" << endl;
 									cout << "you have to choses you can go to the forest or go back" << endl;
@@ -259,14 +280,15 @@ void chapter1()
 									if (userinput == 1) 
 									{
 										cout << "you deside to go north" << endl;
+
 									}
 									else if (userinput == 2) 
 									{
-
+										cout << "so you deside to go south" << endl;
 									}
 									else if (userinput == 3) 
 									{
-
+										cout << "so you deside to go east" << endl;
 									}
 								}
 
@@ -292,7 +314,7 @@ void chapter1()
 					{
 
 					}
-					else if (userinput == 2);
+					else if (userinput == 2)
 					{
 						cout << "you snick around him but it was really close" << endl;
 						cout << "you have to choses you can go to the forest or go back" << endl;
@@ -460,7 +482,8 @@ void chapter1()
 										cout << "you end your advanchrt and go to sleep" << endl;
 									}
 								}
-							}
+			
+				}
 							else if (userinput == 3)
 							{
 								cout << "you deside to go to the forest" << endl;
@@ -539,6 +562,16 @@ void chapter1()
 }
 void chapter2() 
 {
+	fstream save;
+	save.open("saveGame.txt");
+	if (save.fail())
+	{
+		cout << "file not there (chapter 2)" << endl;
+		return;
+	}
+	save << "2";
+	save.flush();
+	save.close();
 	int userinput;
 	ColorPicker(6);
 	cout << "you enter the other land you can go in three dracsons go north south and east"<<endl;
