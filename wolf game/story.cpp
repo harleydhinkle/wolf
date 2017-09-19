@@ -11,7 +11,7 @@ void ColorPicker(int color)
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
-void printswich(int DayOutCome , int day) 
+void printswich(int DayOutCome , int &day) 
 {
 	switch (DayOutCome)
 	{
@@ -27,8 +27,9 @@ void printswich(int DayOutCome , int day)
 	case 3:
 		std::cout << "you deside to go out and find food" << std::endl;
 		break;
-	case 7:
+	case 4:
 		std::cout << "you were to lazy and the pack desides to kick you out" << std::endl;
+		day++;
 		break;
 	}
 }
@@ -46,38 +47,43 @@ void intro(int day)
 	int userinput;
 	int DayOutCome = 0;
 
-	while (day <= 7) {
-		printswich(DayOutCome,day);
-
+	while (day <= 7) 
+	{
+		
+		if (day == 7)
+		{
+			DayOutCome = 4;
+			
+		}
+		printswich(DayOutCome, day);
 
 		//std::cout << "it is day:" << day << " you wake up in your cave one of your pack mambers tell you the packs out of food" << std::endl;
 		//std::cout << "you have to choses you can ignore this and go back to sleep or you can get up and start the story" << std::endl;
 
-		std::cout << "1: Go back to sleep \n2: Go Look for food" << std::endl;
-
-		std::cin >> userinput;
-		//std::cout << "day:" << day << " it is the next day the same pack mamber tells you that the pack is more hunger" << std::endl;
-		if (userinput == 1)
+		if (day < 7)
 		{
-			std::cout << "you deside to go back to sleep and wast a day" << std::endl;
-			day = day + 1;
+			std::cout << "1: Go back to sleep \n2: Go Look for food" << std::endl;
+
+			std::cin >> userinput;
 			//std::cout << "day:" << day << " it is the next day the same pack mamber tells you that the pack is more hunger" << std::endl;
-			DayOutCome = 2;
-			if(day == 7 )
+			if (userinput == 1)
 			{
-				DayOutCome = 7;
-				continue;
+				std::cout << "you deside to go back to sleep and wast a day" << std::endl;
+				day = day + 1;
+				//std::cout << "day:" << day << " it is the next day the same pack mamber tells you that the pack is more hunger" << std::endl;
+				DayOutCome = 2;
+
+			}
+			else if (userinput == 2)
+			{
+				//std::cout << "you deside to go out and find food" << std::endl;
+				chapter1();
+				DayOutCome = 3;
 				break;
 			}
-			
 		}
-		else
-		{
-			//std::cout << "you deside to go out and find food" << std::endl;
-			chapter1();
-			DayOutCome = 3;
-			break;
-		}
+
+		
 
 	}
 	
