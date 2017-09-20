@@ -586,16 +586,31 @@ void chapter2()
 	if (userinput == 1) 
 	{
 		cout <<"you deside to go north" << endl;
-		cout << "you go north you see a wolf and some food you can fight the wolf or go around him and grab the food" << endl;
-		cout << "1:fight \n2:snick and grab the food" << endl;
+		cout << "you go north you see  some roten food you can go back or contue looking north" << endl;
+		cout << "1:keep looking \n2:go back" << endl;
 		cin >> userinput;
 		if (userinput == 1) 
 		{
-			cout << "you deside to fight the wolf" << endl;
+			cout << "you deside to keep looking" << endl;
+			cout << "so you keep looking you have three dracsons to look in that drackson north outh east" << endl;
+			cout << "1: to go north \n2:to go south \n3:east" << endl;
+			cin >> userinput;
+			if (userinput == 1) 
+			{
+				cout << "you deside to go north" << endl;
+			}
+			else if (userinput == 2) 
+			{
+
+			}
+			else if (userinput == 3)
+			{
+
+			}
 		}
 		else if (userinput == 2) 
 		{
-			cout << "you snick around him and grab the food you you go home with the food you win" << endl;
+			cout << "you deside to go back and look in the other dracksons" << endl;
 		}
 	}
 	else if (userinput == 2) 
